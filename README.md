@@ -21,7 +21,7 @@ A hero section with:
 
 A responsive grid of project cards. Each card includes:
 
-- A screenshot (`img/screenshot-*.png`)
+- A screenshot (`img/Screenshot-*.png`)
 - The project name
 - A hover overlay with:
   - Project title
@@ -57,33 +57,31 @@ The projects currently listed:
 
 ## Screenshots
 
-Place your project screenshots in an `img/` folder at the root of this project.
 
-Expected file names:
 
-- `img/screenshot-decimal-to-binary-converter.png`
-- `img/screenshot-football-cards.png`
-- `img/screenshot-gradebook-app.png`
-- `img/screenshot-music-player.png`
-- `img/screenshot-number-sorter.png`
-- `img/screenshot-palindrome-checker.png`
-- `img/screenshot-product-landing-page.png`
-- `img/screenshot-pyramid-generator.png`
-- `img/screenshot-random-background-changer.png`
-- `img/screenshot-rock-paper-scissor.png`
-- `img/screenshot-roman-numeral-converter.png`
-- `img/screenshot-rpg-game.png`
-- `img/screenshot-spam-filter.png`
-- `img/screenshot-statistics-calculator.png`
-- `img/screenshot-survey-form-page.png`
-- `img/screenshot-technical-documentation-page.png`
-- `img/screenshot-todo-app.png`
-- `img/screenshot-tribute-page.png`
-- `img/screenshot-date-formatter.png`
-- `img/screenshot-calorie-counter.png`
-- `img/screenshot-tip-calculator.png`
+- `img/Screenshot-decimal-to-binary-converter.png`
+- `img/Screenshot-football-cards.png`
+- `img/Screenshot-gradebook-app.png`
+- `img/Screenshot-music-player.png`
+- `img/Screenshot-number-sorter.png`
+- `img/Sscreenshot-palindrome-checker.png`
+- `img/Screenshot-product-landing-page.png`
+- `img/Screenshot-pyramid-generator.png`
+- `img/Screenshot-random-background-changer.png`
+- `img/Screenshot-rock-paper-scissor.png`
+- `img/Screenshot-roman-numeral-converter.png`
+- `img/Screenshot-rpg-game.png`
+- `img/Screenshot-spam-filter.png`
+- `img/Screenshot-statistics-calculator.png`
+- `img/Screenshot-survey-form-page.png`
+- `img/Screenshot-technical-documentation-page.png`
+- `img/Screenshot-todo-app.png`
+- `img/Screenshot-tribute-page.png`
+- `img/Screenshot-date-formatter.png`
+- `img/Screenshot-calorie-counter.png`
+- `img/Screenshot-tip-calculator.png`
 
-You can adjust the file names and paths in `index.html` if your naming is slightly different.
+
 
 ---
 
