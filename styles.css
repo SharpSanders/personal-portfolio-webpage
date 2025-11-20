@@ -1,0 +1,238 @@
+/* Base layout */
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f4f6fa;
+  color: #162b51;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar */
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #243b73;
+  color: white;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+#navbar a {
+  font-weight: 600;
+  color: white;
+  letter-spacing: 0.03em;
+  font-size: 0.95rem;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+#navbar a:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+/* Welcome Section */
+#welcome-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top left, #ffd93d 0, #ff6b81 35%, #243b73 90%);
+  color: #0b1430;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.welcome-inner {
+  max-width: 720px;
+}
+
+#welcome-section h1 {
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  margin-bottom: 0.75rem;
+}
+
+.welcome-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 1.8rem;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Hero buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.5rem;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease,
+    transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-primary {
+  background-color: #243b73;
+  color: #fefefe;
+  box-shadow: 0 8px 20px rgba(12, 22, 66, 0.45);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(12, 22, 66, 0.55);
+}
+
+.btn-ghost {
+  background-color: rgba(255, 255, 255, 0.22);
+  color: #0b1430;
+  border-color: rgba(11, 20, 48, 0.2);
+}
+
+.btn-ghost:hover {
+  background-color: rgba(255, 255, 255, 0.32);
+  transform: translateY(-1px);
+}
+
+/* Projects Section */
+#projects {
+  padding: 100px 20px 60px;
+  text-align: center;
+  scroll-margin-top: 80px; /* navbar offset */
+}
+
+#projects h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.projects-intro {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #4a587a;
+  font-size: 0.95rem;
+}
+
+/* Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 10px;
+}
+
+/* Project Card */
+.project-tile {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.project-tile.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+}
+
+.project-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-image-wrapper img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Hover overlay */
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.6)
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: #fefefe;
+  text-align: center;
+  padding: 10px;
+}
+
+.project-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.project-link-label {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.project-tagline {
+  font-size: 0.8rem;
+  margin-top: 4px;
+  text-align: center;
+  opacity: 0.9;
+  display: block;
+  line-height: 1.2rem;
+}
+
+.project-tile:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-tile:hover .project-image-wrapper img {
+  transform: scale(1.06);
+}
+
+.project-caption {
+  padding: 12px 14px 14px;
+  font-weight: 600;
+  font-size: 0.98rem;
+  color: #243b73;
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #welcome-section h1 {
+    font-size: 2.2rem;
+  }
+}
